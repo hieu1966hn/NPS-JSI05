@@ -1,14 +1,14 @@
 /*
 LocalStorage là gì?
 - Nơi chứa dữ liệu tạm thời trên trang web
-- Lưu ý: 
+- Lưu ý:
     + Dữ liệu này sẽ mất đi khi chúng ta xóa bộ nhớ đệm
-    + Chỉ dùng trong chế độ test mode 
+    + Chỉ dùng trong chế độ test mode
     + LocalStorage chỉ lưu trữ các chuỗi thôi
 - Khi nào dùng localStorage:
   + Khi cần lưu trữ dữ liệu không quan trọng (không nhạy cảm)
   + Giúp lưu trữ dl tạm thời trước khi nó được đẩy lên máy chủ (sau đó xóa sạch localStorage)
-   
+
 - Hạn chế:
   + Chỉ chứa dạng chuỗi
   + Dữ liệu không an toàn
@@ -38,15 +38,23 @@ LocalStorage là gì?
 
 
 //// lưu trữ đối tượng trên LocalStorage thì sao:
-const Car = {
-  brand: "Suzuki",
-  color: "white",
-  price: 10000
-}
+// const Car = {
+//   brand: "Suzuki",
+//   color: "white",
+//   price: 10000
+// }
 
-localStorage.setItem("car", JSON.stringify(Car));
-let car = JSON.parse(localStorage.getItem("car"))// khi lấy bình thường string, => quy đổi về KDL ban đầu
-console.log("car: ", car);
+// localStorage.setItem("car", JSON.stringify(Car));
+// let car = JSON.parse(localStorage.getItem("car"))// khi lấy bình thường string, => quy đổi về KDL ban đầu
+// console.log("car: ", car);
+
+
+/*
+Đề bài luyện tập: Code một trang Todolist với các tính năng như sau:
+- Thêm mới 1 task
+- Đánh dấu 1 task đã hoàn thành
+- Xóa một task 
+*/
 
 
 
