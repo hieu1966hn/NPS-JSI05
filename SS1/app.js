@@ -58,7 +58,78 @@ LocalStorage là gì?
 
 
 
+// code tinh nang
+const form = document.getElementById("form");
+const input = document.getElementById("input");
+const button = document.getElementById("button");
+const todo = document.getElementById("todo")
+
+let todoList = [];
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); /// Sự kiện này dùng để làm gì? Dùng để ngăn sự kiện load mặc định của trình duyệt
+
+  // Thêm một task
+  addTodo();
+})
+
+function addTodo() {
+  // lay gia tri the input
+
+  const newTodo = input.value;
 
 
+  // kiem tra tra ve ket qua neu khong co gi nhap vao
+  if (!newTodo) return;
+
+  //them 1 task vao todolist
+  todoList.push({
+    text: newTodo,
+    completed: false
+  })
+
+  console.log(todoList);
+
+  // them todolist vao localStorage
+  localStorage.setItem("todos", JSON.stringify(todoList))
+
+  render(); // dung để hiển thị kết quả ra màn hình
+}
+
+function render() {
+  // clear the list
+  todo.innerHTML = null;
 
 
+  // lay du lieu todolist tu localStorage
+  const todos = localStorage.getItem("todos"); // string
+
+  todoList = JSON.parse(todos) || [];
+  console.log("todoList: ", todoList);
+
+  for (let i = 0; i < todoList.length; i++) {
+    const item = document.createElement("li");
+
+    // tao checkbox de update gia tri thay doi
+    const checkbox = document.createElement("input");
+
+    checkbox.type = 'checkbox';
+
+    checkbox.addEventListener("click", (event) => {
+      todoList[i].completed = e.target.checked;
+      localStorage.setItem("todos", JSON.stringify(todoList))
+
+      // kiem tra neu todo item da hoan thien thi them 1 class moi
+      if (todoList[i].completed) {
+        item.classList.add("completed");
+        item.classList.remove("uncompleted");
+        checkbox.checked = todoList[i].completed
+      }
+      else {
+        item.classList.add("uncompleted");
+        item.classList.remove("completed");
+        checkbox.checked = todoList[i].completed
+      }
+    })
+  }
+
+}
