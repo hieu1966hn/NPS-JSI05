@@ -22,28 +22,49 @@
 
 // VD mới về Object.assign
 
-let VT = {
-  name: "Nguyễn Vũ Tiến",
-  age: 14,
-  hobbies: "Playing game, sleeping",
-  TienID: "001"
+// let VT = {
+//   name: "Nguyễn Vũ Tiến",
+//   age: 14,
+//   hobbies: "Playing game, sleeping",
+//   TienID: "001"
+// }
+
+// let TH = {
+//   name: "Nguyễn Trung Hiếu",
+//   age: 17,
+//   hobbies: "Nội trợ",
+//   HieuID: "002"
+// }
+
+// let GN = {
+//   name: "Lương Gia Nam",
+//   age: 17,
+//   hobbies: "Playing game, cooking",
+//   NamID: "003"
+// }
+
+
+// let NPS_JSI05 = Object.assign(VT, TH, GN);
+// console.log("NPS_JSI05: ", NPS_JSI05);
+
+
+
+// --------- Spread Syntax--------------//
+// Sử dụng trong function call
+
+// VD
+let sum = (x, y, z) => {
+  console.log(x, y, z);
+  return x + y + z;
 }
 
-let TH = {
-  name: "Nguyễn Trung Hiếu",
-  age: 17,
-  hobbies: "Nội trợ",
-  HieuID: "002"
-}
+let number = [1, 4, 7, 8]; // Tổng 4 phần tử = 20, Tổng 3 phần tử = 12
 
-let GN = {
-  name: "Lương Gia Nam",
-  age: 17,
-  hobbies: "Playing game, cooking",
-  NamID: "003"
-}
+console.log(
+  sum(...number)
+);
 
-
-let NPS_JSI05 = Object.assign(VT, TH, GN);
-console.log("NPS_JSI05: ", NPS_JSI05);
-
+// Kết quả đạt được? 12
+/*
+NX: sum(...number): Tách từng phần tử của mảng và gán vào tham số tương ứng: x,y,z
+*/
