@@ -186,7 +186,15 @@ const animals = [
 
 
 /// Bài toán 2: Lấy ra con vật nào có cân nặng "weight" < 1000
-let animalWeightMinium = animals.filter((item) => {
-  return item.weight < 1000
+// let animalWeightMinium = animals.filter((item) => {
+//   return item.weight < 1000
+// })
+// console.log("animalWeightMinium: ", animalWeightMinium);
+
+
+/// Bài toán 3: Lọc ra con vật nào có size: "small"
+let animalSizeMinium = animals.filter((item) => {
+  return item.size === 'small';
 })
-console.log("animalWeightMinium: ", animalWeightMinium);
+console.log("animalSizeMinium: ", animalSizeMinium);
+
