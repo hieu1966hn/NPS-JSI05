@@ -88,5 +88,9 @@ let copy_Array = [...number]
 console.log("copy_Array: ", copy_Array);
 
 // Copy Array nomal
-let copyArray_Original = number
+let copyArray_Original = number // Tuyệt đối ko sử dụng cú pháp này
 console.log("copyArray_Original: ", copyArray_Original);
+/*
+Khi copy mảng với dấu bằng: Thì 2 biến mảng này cùng dùng chung ô nhớ trên hệ thống
+=> khi phần tử 1 mảng này thay đổi thì mảng còn lại thay đổi tương tự
+*/
