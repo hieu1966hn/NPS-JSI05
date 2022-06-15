@@ -183,3 +183,10 @@ const animals = [
 //   return item.kind
 // })
 // console.log("animalsKind: ", animalsKind);
+
+
+/// Bài toán 2: Lấy ra con vật nào có cân nặng "weight" < 1000
+let animalWeightMinium = animals.filter((item) => {
+  return item.weight < 1000
+})
+console.log("animalWeightMinium: ", animalWeightMinium);
