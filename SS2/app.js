@@ -53,18 +53,40 @@
 // Sử dụng trong function call
 
 // VD
-let sum = (x, y, z) => {
-  console.log(x, y, z);
-  return x + y + z;
-}
+// let sum = (x, y, z) => {
+//   console.log(x, y, z);
+//   return x + y + z;
+// }
 
-let number = [1, 4, 7, 8]; // Tổng 4 phần tử = 20, Tổng 3 phần tử = 12
+// let number = [1, 4, 7, 8]; // Tổng 4 phần tử = 20, Tổng 3 phần tử = 12
 
-console.log(
-  sum(...number)
-);
+// console.log(
+//   sum(...number)
+// );
 
 // Kết quả đạt được? 12
 /*
 NX: sum(...number): Tách từng phần tử của mảng và gán vào tham số tương ứng: x,y,z
 */
+
+
+///// Copy object
+let VT = {
+  name: "Nguyễn Vũ Tiến",
+  age: 14,
+  hobbies: "Playing game, sleeping",
+  TienID: "001"
+}
+
+let copy_Object = { ...VT }
+// console.log("copy_Object: ", copy_Object);
+
+
+///// Copy Array (sao chép mảng)
+let number = [1, 4, 7, 8];
+let copy_Array = [...number]
+console.log("copy_Array: ", copy_Array);
+
+// Copy Array nomal
+let copyArray_Original = number
+console.log("copyArray_Original: ", copyArray_Original);
