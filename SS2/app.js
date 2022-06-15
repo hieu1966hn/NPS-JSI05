@@ -100,10 +100,17 @@ Khi copy mảng với dấu bằng: Thì 2 biến mảng này cùng dùng chung 
 
 
 // ---------------------------- Nối Array ---------------------------
-let arr1 = ["abc", 34, "Gaming"];
-let number = [1, 4, 7];
+// let arr1 = ["abc", 34, "Gaming"];
+// let number = [1, 4, 7];
 
-// Nối 2 mảng trên vào mảng thứ 3 có tên gọi là: connector
-let connector = [...arr1, ...number];
-console.log("connector: ", connector);
+// // Nối 2 mảng trên vào mảng thứ 3 có tên gọi là: connector
+// let connector = [...arr1, ...number];
+// console.log("connector: ", connector);
+
+
+// --------------- Convert String -> Array
+let str = "Hello, my name is Hieu";
+// Convert String => Array
+let chars = [...str]
+console.log("chars: ", chars);
 
