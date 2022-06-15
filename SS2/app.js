@@ -143,9 +143,43 @@ Khi copy mảng với dấu bằng: Thì 2 biến mảng này cùng dùng chung 
 
 // ------------------------ Filter -------------------------
 // VD về filter: Trả về 1 mảng mới sao cho các phần tử trong mảng arr phải lớn hơn 4
-let arr = [1, 2, 3, 4, 5, 6, 7, 10];
+// let arr = [1, 2, 3, 4, 5, 6, 7, 10];
 
-let arrLonHonBon = arr.filter((item) => {
-  return item > 4
-})
-console.log("arrLonHonBon: ", arrLonHonBon);
+// let arrLonHonBon = arr.filter((item) => {
+//   return item > 4
+// })
+// console.log("arrLonHonBon: ", arrLonHonBon);
+
+
+///// Vd về filter và map như sau:
+
+const animals = [
+  {
+    kind: "cat",
+    size: "small",
+    weight: 5
+  },
+  {
+    kind: "dog",
+    size: "small",
+    weight: 7
+  },
+  {
+    kind: "elephant",
+    size: "big",
+    weight: 5000
+  }
+]
+
+/// Bài toán: In ra "kind" từng con vật trong mảng animals
+// C1: for of
+// for (let key of animals) {
+//   console.log(key.kind);
+// }
+
+
+// C2: với Map
+// let animalsKind = animals.map((item) => {
+//   return item.kind
+// })
+// console.log("animalsKind: ", animalsKind);
