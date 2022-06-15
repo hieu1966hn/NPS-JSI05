@@ -71,26 +71,39 @@ NX: sum(...number): Tách từng phần tử của mảng và gán vào tham s�
 
 
 ///// Copy object
-let VT = {
-  name: "Nguyễn Vũ Tiến",
-  age: 14,
-  hobbies: "Playing game, sleeping",
-  TienID: "001"
-}
+// let VT = {
+//   name: "Nguyễn Vũ Tiến",
+//   age: 14,
+//   hobbies: "Playing game, sleeping",
+//   TienID: "001"
+// }
 
-let copy_Object = { ...VT }
+// let copy_Object = { ...VT }
 // console.log("copy_Object: ", copy_Object);
 
 
 ///// Copy Array (sao chép mảng)
-let number = [1, 4, 7, 8];
-let copy_Array = [...number]
-console.log("copy_Array: ", copy_Array);
+// let number = [1, 4, 7, 8];
+// let copy_Array = [...number]
+// console.log("copy_Array: ", copy_Array);
 
-// Copy Array nomal
-let copyArray_Original = number // Tuyệt đối ko sử dụng cú pháp này
-console.log("copyArray_Original: ", copyArray_Original);
+// // Copy Array nomal
+// let copyArray_Original = number // Tuyệt đối ko sử dụng cú pháp này
+// console.log("copyArray_Original: ", copyArray_Original);
 /*
 Khi copy mảng với dấu bằng: Thì 2 biến mảng này cùng dùng chung ô nhớ trên hệ thống
 => khi phần tử 1 mảng này thay đổi thì mảng còn lại thay đổi tương tự
 */
+
+
+
+
+
+// ---------------------------- Nối Array ---------------------------
+let arr1 = ["abc", 34, "Gaming"];
+let number = [1, 4, 7];
+
+// Nối 2 mảng trên vào mảng thứ 3 có tên gọi là: connector
+let connector = [...arr1, ...number];
+console.log("connector: ", connector);
+
