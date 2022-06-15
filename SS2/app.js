@@ -120,7 +120,7 @@ Khi copy mảng với dấu bằng: Thì 2 biến mảng này cùng dùng chung 
 // ------------------- Map, Filter ------------------------
 /// VD về map
 
-let arr = [1, 2, 3, 4, 5, 6, 7, 10];
+// let arr = [1, 2, 3, 4, 5, 6, 7, 10];
 
 //Yêu cầu: Tăng từng phần tử mảng lên gấp 2 lần: 2,4,6,8,10, ... 20
 // C1: Dùng for thường, for in
@@ -131,7 +131,21 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 10];
 // console.log(arr);
 
 // C2: Sử dụng map: Tạo ra mảng mới dựa trên thay đổi từ mảng cũ => Kiểu dữ liệu từng phần tử là tương ứng nhau
-let arrMap = arr.map((item) => {
-  return item * 2
+// let arrMap = arr.map((item) => {
+//   return item * 2
+// })
+// console.log("arrMap: ", arrMap);
+
+
+
+
+
+
+// ------------------------ Filter -------------------------
+// VD về filter: Trả về 1 mảng mới sao cho các phần tử trong mảng arr phải lớn hơn 4
+let arr = [1, 2, 3, 4, 5, 6, 7, 10];
+
+let arrLonHonBon = arr.filter((item) => {
+  return item > 4
 })
-console.log("arrMap: ", arrMap);
+console.log("arrLonHonBon: ", arrLonHonBon);
