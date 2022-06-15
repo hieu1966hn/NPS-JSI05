@@ -109,8 +109,29 @@ Khi copy mảng với dấu bằng: Thì 2 biến mảng này cùng dùng chung 
 
 
 // --------------- Convert String -> Array
-let str = "Hello, my name is Hieu";
-// Convert String => Array
-let chars = [...str]
-console.log("chars: ", chars);
+// let str = "Hello, my name is Hieu";
+// // Convert String => Array
+// let chars = [...str]
+// console.log("chars: ", chars);
 
+
+
+
+// ------------------- Map, Filter ------------------------
+/// VD về map
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 10];
+
+//Yêu cầu: Tăng từng phần tử mảng lên gấp 2 lần: 2,4,6,8,10, ... 20
+// C1: Dùng for thường, for in
+
+// for (let key in arr) {
+//   arr[key] = arr[key] * 2
+// }
+// console.log(arr);
+
+// C2: Sử dụng map: Tạo ra mảng mới dựa trên thay đổi từ mảng cũ => Kiểu dữ liệu từng phần tử là tương ứng nhau
+let arrMap = arr.map((item) => {
+  return item * 2
+})
+console.log("arrMap: ", arrMap);
