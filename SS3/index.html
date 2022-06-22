@@ -36,14 +36,28 @@
         this.width = _width;
         this.height = _height;
         this.color = _color
-
       }
+
+      // khởi tạo phương thức (hàm)
+      getArea() { // Phương thức tính diện tích HCN
+        return this.width * this.height
+      }
+
+
     }
 
     // Khởi tạo biến mới có kiểu dữ liệu là hình chữ nhật
     let myRectangle1 = new Rectangle(6, 3, "Blue");
     console.log("myRectangle1: ", myRectangle1.color);// "blue"
 
+
+    // Bài toán: Tính diện tích HCN sao cho: chiều ngang: 5, chiều cao: 4
+    let myRectangle2 = new Rectangle(5, 4, "");
+    // C1
+    // console.log("Diện tích HCN 2 là: ", myRectangle2.width * myRectangle2.height);
+
+    // C2:
+    console.log(myRectangle2.getArea());
 
   </script>
 
