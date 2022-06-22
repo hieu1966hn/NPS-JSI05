@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Classes -> Object
+  
+    Instance Properties: what they have (Person)
+    - name:
+    - age:
+    - height:
+
+    Instance Method: what they do
+    - talk
+    - run
+    - jump
+    - eat
+  -->
+
+  <script>
+    // Code JS tại đây
+    // Khởi tạo class (1 lớp)
+    class Rectangle { // hình chữ nhật
+      // Setup: Hàm khởi tạo
+      constructor(_width, _height, _color) {
+        // console.log("the Rectangle is being created");
+        // luôn luôn chạy đầu tiên
+
+        // key = value truyền vào
+        this.width = _width;
+        this.height = _height;
+        this.color = _color
+
+      }
+    }
+
+    // Khởi tạo biến mới có kiểu dữ liệu là hình chữ nhật
+    let myRectangle1 = new Rectangle(6, 3, "Blue");
+    console.log("myRectangle1: ", myRectangle1.color);// "blue"
+
+
+  </script>
+
+</body>
+
+</html>
