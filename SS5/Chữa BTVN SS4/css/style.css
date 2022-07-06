@@ -41,3 +41,8 @@
   color: #fff;
   font-size: 30px;
 }
+
+
+.error {
+  color: red;
+}
