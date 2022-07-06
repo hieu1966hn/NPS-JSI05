@@ -9,4 +9,31 @@
   padding: 10px 15px;
   border-radius: 5px;
   width: 100%;
+  outline: none;
+}
+
+.input-wrapper {
+  margin-bottom: 10px;
+}
+
+.btn {
+  padding: 8px 20px;
+  background-color: #037bfe;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.cusor {
+  cursor: pointer;
+}
+
+.header {
+  height: 64px;
+  background-color: #037bfe;
+  line-height: 64px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
 }
