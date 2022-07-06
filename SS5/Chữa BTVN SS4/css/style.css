@@ -25,8 +25,12 @@
   cursor: pointer;
 }
 
-.cusor {
+.cursor {
   cursor: pointer;
+}
+
+.form-action .cursor:hover {
+  color: red;
 }
 
 .header {
