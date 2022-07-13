@@ -1,5 +1,4 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
-
 const init = () => {
 
   console.log("Windows loaded");
@@ -21,6 +20,9 @@ const init = () => {
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
+  console.log("app: ", app);
+
+
 }
 
 
