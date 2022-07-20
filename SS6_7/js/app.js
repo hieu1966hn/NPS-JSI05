@@ -27,8 +27,24 @@ const init = () => {
   // const app = initializeApp(firebaseConfig);
   console.log(firebase.app().name); //DEFAULT
 
+  //// Kiểm tra trạng thái đăng nhập của người dùng 
+  // firebase.auth().onAuthStateChanged(function (user) {
+  //   console.log(user);
+  //   if (user && user.emailVerified) {
+
+  //     window.location.href = "index.html"
+  //   }
+  //   else {
+  //     window.location.href = "login.html"
+  //   }
+  // });
+
+
 }
 
 
 window.onload = init;
+
+
+
 
