@@ -1,4 +1,3 @@
-
 const firebaseApp = firebase.initializeApp({
   /* Firebase config */
   apiKey: "AIzaSyBz9O4qIwn4LwMfidxc98kjp-ktWI2HbLw",
@@ -12,9 +11,7 @@ const database = firebaseApp.firestore();
 const auth = firebaseApp.auth();
 
 
-
-
-//// Thực hành 
+/// Thực hành: 
 const userId = document.getElementById('userId');
 const firstName = document.getElementById('firstName');
 const lastName = document.getElementById('lastName');
@@ -25,55 +22,43 @@ const readBtn = document.getElementById('readBtn');
 const removeBtn = document.getElementById('removeBtn');
 
 
-/// khai báo mảng chứa các id tương ứng
+/// khai báo 1 mảng listId: Dùng để chứa toàn bộ id cần lưu
 let listId = [];
 
-/// Save data
+//// Add data;
 const usersCollection = database.collection('users');
 
+addBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  const ID = usersCollection.doc(); // tạo 1 random id
+  console.log("ID: ", ID);
 
-addBtn.addEventListener('click', e => {
-  e.preventDefault();
-  const ID = usersCollection.doc();
   listId.push({
     username: userId.value,
-    id: ID.id,
-  });
+    id: ID.id
+  })
 
-  console.log(ID.id);
   ID.set({
     first_name: firstName.value,
     last_name: lastName.value,
     age: Number(age.value)
-  });
-});
+  })
+
+})
 
 
+/// Update
+updateBtn.addEventListener('click', (event) => {
+  event.preventDefault();
 
-//// update data
-updateBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  const ID = usersCollection.doc();
-  console.log(userId.value);
-  console.log(listId.find(item => item.username == userId.value));
+
   if (listId.find(item => item.username == userId.value)) {
     let id = listId.find(item => item.username == userId.value).id
-    console.log(id);
+    console.log("id: ", id);
     usersCollection.doc(id).update({
       first_name: firstName.value,
       last_name: lastName.value,
       age: Number(age.value)
-    });
+    })
   }
-});
-
-/// update đối tượng hơi chút khó khăn  (nên sử dụng cú pháp: đối tượng.khóa: giá trị)
-// updateBtn.addEventListener('click', e => {
-//   e.preventDefault();
-//   usersCollection.doc(userId.value).update({
-//     'favorite.food': 'Pizza'
-//   });
-// });
-
-
-///// update Arrays
+})
